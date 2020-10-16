@@ -143,17 +143,16 @@ header {
 }
 
 /*
-$color-1: #001A27; // Cornflower Blue - Action color
-$color-2: #27222B; // Dark Blue
-$color-3: #305C5F; // Red
-$color-4: #96B8BD; // light grey
-$color-5: #F5E4D2; // white
+$color-1: #001A27; // Dark Blue
+$color-2: #215c3d; // Dark Blue
+$color-3: #6cd0e8; // Turquoise
+$color-4: #F5e4D2; // Almond
+$color-5: white; // white
 
 // additional colors
 
 $success: #6fce72; // green
-$alert: $color-3; // red
-*/
+$alert: $color-3; // red*/
 /* -------------------------------- 
 
 xBackground 
@@ -171,7 +170,7 @@ xPatterns
 -------------------------------- */
 .cd-box {
   /* this is the container of various design elements - i.e. the 2 logo of the branding section */
-  border: 1px solid #F5e4D2;
+  border: 1px solid white;
   border-radius: 3px;
   background: white;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -279,7 +278,7 @@ xPage title
 
 -------------------------------- */
 main > h1 {
-  color: #215c3d;
+  color: #001A27;
 }
 @media only screen and (min-width: 1600px) {
   main > h1 {
@@ -336,7 +335,7 @@ section > h2::before {
 p {
   font-size: 1.4rem;
   line-height: 1.4;
-  color: #43ba7b;
+  color: #001A27;
 }
 p a {
   color: #001A27;
@@ -353,56 +352,65 @@ p a {
 
 xButtons 
 
--------------------------------- */
+-------------------------------- 
+
 .btn {
   border: none;
   box-shadow: none;
   border-radius: 0.25em;
-  font-size: 1.4rem;
-  font-family: "Open Sans", sans-serif;
-  color: white;
+  font: {
+    size: 1.4rem;
+    family: $secondary-font;
+  }
+  color: $color-5;
   padding: 0.6em 2.2em;
   cursor: pointer;
-  background: #001A27;
-}
-.btn:focus {
-  outline: none;
-}
-.no-touch .btn:hover {
-  background: #002b41;
-}
-.btn.btn-success {
-  background: #6fce72;
-}
-.no-touch .btn.btn-success:hover {
-  background: #82d485;
-}
-.btn.btn-alert {
-  background: #6cd0e8;
-}
-.no-touch .btn.btn-alert:hover {
-  background: #82d7eb;
-}
-.btn.btn-outline {
-  color: #001A27;
-  background: transparent;
-  box-shadow: inset 0 0 0 1px #001A27;
-}
-.no-touch .btn.btn-outline:hover {
-  color: white;
-  background: #001A27;
-}
-@media only screen and (min-width: 768px) {
-  .btn {
+  background: $color-1;
+
+  &:focus {
+    outline: none;
+  }
+
+  .no-touch &:hover {
+    background: lighten($color-1, 5%);
+  }
+
+  &.btn-success {
+    background: $success;
+
+    .no-touch &:hover {
+      background: lighten($success, 5%);
+    }
+  }
+
+  &.btn-alert {
+    background: $alert;
+
+    .no-touch &:hover {
+      background: lighten($alert, 5%);
+    }
+  }
+
+  &.btn-outline {
+    color: $color-1;
+    background: transparent;
+    box-shadow: inset 0 0 0 1px $color-1;
+
+    .no-touch &:hover {
+      color: $color-5;
+      background: $color-1;
+    }
+  }
+
+  @include MQ(S) {
     font-size: 1.6rem;
   }
 }
 
 .cd-buttons .cd-box:nth-of-type(2) span {
-  /* CSS class name color */
-  color: #001A27;
-}
-
+  /* CSS class name color 
+  color: $color-1;
+}*/
 /* -------------------------------- 
 
 xIcons 
@@ -418,37 +426,41 @@ xIcons
 
 xForm 
 
--------------------------------- */
-input[type=text],
+-------------------------------- 
+
+input[type='text'],
 select {
-  border: 1px solid #F5e4D2;
+  border: 1px solid $color-4;
   border-radius: 0.25em;
-  background: white;
-}
-input[type=text]:focus,
-select:focus {
-  outline: none;
+  background: $color-5;
+
+  &:focus {
+    outline: none;
+  }
 }
 
-input[type=text] {
+input[type='text'] {
   padding: 0.6em 1em;
-  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
-}
-input[type=text].success {
-  border-color: #6fce72;
-  box-shadow: 0 0 6px rgba(111, 206, 114, 0.2);
-}
-input[type=text].alert {
-  border-color: #6cd0e8;
-  box-shadow: 0 0 6px rgba(108, 208, 232, 0.2);
-}
-input[type=text]:focus {
-  border-color: #001A27;
-  box-shadow: 0 0 6px rgba(0, 26, 39, 0.2);
+  box-shadow: inset 1px 1px rgba(#000, 0.03);
+
+  &.success {
+    border-color: $success;
+    box-shadow: 0 0 6px rgba($success, 0.2);
+  }
+
+  &.alert {
+    border-color: $alert;
+    box-shadow: 0 0 6px rgba($alert, 0.2);
+  }
+
+  &:focus {
+    border-color: $color-1;
+    box-shadow: 0 0 6px rgba($color-1, 0.2);
+  }
 }
 
-input[type=radio],
-input[type=checkbox] {
+input[type='radio'],
+input[type='checkbox'] {
   position: absolute;
   left: 0;
   top: 0;
@@ -460,38 +472,31 @@ input[type=checkbox] {
 .radio-label,
 .checkbox-label {
   padding-left: 24px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.radio-label::before, .radio-label::after,
-.checkbox-label::before,
-.checkbox-label::after {
-  /* custom radio and check boxes */
-  content: "";
-  display: block;
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.radio-label::before,
-.checkbox-label::before {
-  left: 0;
-  border: 1px solid #F5e4D2;
-  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
-}
-.radio-label::after,
-.checkbox-label::after {
-  left: 3px;
-  background: url("/icon-check.b3fa7148.svg") no-repeat center center;
-  display: none;
+  @include user-select(none);
+
+  &::before,
+  &::after {
+    /* custom radio and check boxes 
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+
+  &::before {
+    left: 0;
+    border: 1px solid $color-4;
+    box-shadow: inset 1px 1px rgba(#000, 0.03);
+  }
+
+  &::after {
+    left: 3px;
+    background: url('../assets/form/icon-check.svg') no-repeat center center;
+    display: none;
+  }
 }
 
 .radio-label::before {
@@ -502,34 +507,30 @@ input[type=checkbox] {
   border-radius: 3px;
 }
 
-input[type=radio]:checked + label::before,
-input[type=checkbox]:checked + label::before {
-  background-color: #215c3d;
+input[type='radio']:checked + label::before,
+input[type='checkbox']:checked + label::before {
+  background-color: $color-2;
   border: none;
   box-shadow: none;
 }
 
-input[type=radio]:checked + label::after,
-input[type=checkbox]:checked + label::after {
+input[type='radio']:checked + label::after,
+input[type='checkbox']:checked + label::after {
   display: block;
 }
 
 .cd-select::after {
-  /* switcher arrow for select element */
-  content: "";
+  /* switcher arrow for select element 
+  content: '';
   position: absolute;
   z-index: 1;
   right: 14px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
+  @include transform(translateY(-50%));
   display: block;
   width: 16px;
   height: 16px;
-  background: url("/icon-select.65729cd7.svg") no-repeat center center;
+  background: url('../assets/form/icon-select.svg') no-repeat center center;
   pointer-events: none;
 }
 
@@ -537,13 +538,8 @@ select {
   position: relative;
   padding: 0.6em 2em 0.6em 1em;
   cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-}
-
+  @include appearance(none);
+}*/
 /* -------------------------------- 
 
 xBasic style
@@ -782,7 +778,7 @@ header nav {
   right: 0;
   height: 100%;
   width: 80px;
-  background-image: url("/icon-download.b20aadac.svg");
+  background-image: url("../assets/icon-download.svg");
   background-position: center center;
   background-repeat: no-repeat;
   display: none;
@@ -1120,28 +1116,28 @@ section:nth-of-type(10) h2::before {
   margin: 1em;
 }
 .cd-icons .cd-icon-1 {
-  background-image: url("/icon-1.de09c112.svg");
+  background-image: url("../assets/icons/icon-1.svg");
 }
 .cd-icons .cd-icon-2 {
-  background-image: url("/icon-2.153ae19e.svg");
+  background-image: url("../assets/icons/icon-2.svg");
 }
 .cd-icons .cd-icon-3 {
-  background-image: url("/icon-3.255805d5.svg");
+  background-image: url("../assets/icons/icon-3.svg");
 }
 .cd-icons .cd-icon-4 {
-  background-image: url("/icon-4.51c8ed33.svg");
+  background-image: url("../assets/icons/icon-4.svg");
 }
 .cd-icons .cd-icon-5 {
-  background-image: url("/icon-5.b5f82357.svg");
+  background-image: url("../assets/icons/icon-5.svg");
 }
 .cd-icons .cd-icon-6 {
-  background-image: url("/icon-6.7440f143.svg");
+  background-image: url("../assets/icons/icon-6.svg");
 }
 .cd-icons .cd-icon-7 {
-  background-image: url("/icon-7.d3ac3450.svg");
+  background-image: url("../assets/icons/icon-7.svg");
 }
 .cd-icons .cd-icon-8 {
-  background-image: url("/icon-8.3c326c9f.svg");
+  background-image: url("../assets/icons/icon-8.svg");
 }
 
 /* xForm section - basic style */
@@ -1166,5 +1162,3 @@ section:nth-of-type(10) h2::before {
 .no-csstransitions .cd-select::after {
   display: none;
 }
-
-/*# sourceMappingURL=/style-guide.62cc1745.css.map */
