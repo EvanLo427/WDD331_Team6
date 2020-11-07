@@ -14,14 +14,14 @@ section {
 }
 
 html {
-  font-family: "Noto Sans JP", Tahoma, Geneva, Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
   color: #305b72;
-  font-family: "Noto Sans JP", Tahoma, Geneva, Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.75em;
   background: -moz-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
@@ -35,9 +35,9 @@ body {
 
 h1 {
   color: #305b72;
-  font-family: "Nanum Myeongjo", Georgia, serif;
+  font-family: "Nanum Myeongjo", serif;
   font-size: 60px;
-  font-weight: 50em;
+  font-weight: bolder;
   text-align: left;
   line-height: 1em;
 }
@@ -46,14 +46,14 @@ h2 {
   color: #215c3d;
   font-size: 22px;
   font-style: italic;
-  font-weight: 40em;
+  font-weight: lighter;
 }
 
 h3 {
   color: #215c3d;
-  font-family: "Nanum Myeongjo", Georgia, serif;
+  font-family: "Nanum Myeongjo", serif;
   font-size: 40px;
-  font-weight: 30em;
+  font-weight: normal;
   line-height: 1.25em;
   margin: 0.5em 0;
   text-align: left;
@@ -99,7 +99,7 @@ header h2 {
 
 a {
   color: #215c3d;
-  font-family: "Nanum Myeongjo", Georgia, serif;
+  font-family: "Nanum Myeongjo", serif;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
@@ -180,7 +180,7 @@ aside .wrapper li {
 }
 
 aside .wrapper a {
-  font-family: "Nanum Myeongjo", Georgia, serif;
+  font-family: "Nanum Myeongjo", serif;
   font-size: 1.2em;
   font-weight: 40em;
   text-decoration: none;
@@ -190,9 +190,11 @@ aside .wrapper a:focus {
   outline: thin dotted;
 }
 
-aside .wrapper a:active, a:hover {
+aside .wrapper a:active,
+a:hover {
   color: #6cd0e8;
   outline: 0;
+  font-weight: bold;
   text-decoration: underline wavy #305b72;
 }
 
@@ -305,7 +307,7 @@ aside .wrapper a:active, a:hover {
   }
 
   .summary p:first-child {
-    padding-top: 60em;
+    padding-top: 25em;
   }
 
   .preamble {
@@ -317,28 +319,10 @@ aside .wrapper a:active, a:hover {
     display: none;
   }
 
-  div#design-selection {
-    position: absolute;
-    left: 0%;
-    top: 565px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 5px 0 0 60px;
-  }
-
-  div#zen-resources {
-    position: absolute;
-    left: 0%;
-    top: 900px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 5px 0 0 60px;
-  }
-
   .design-archives nav {
     position: absolute;
     left: 0%;
-    top: 500px;
+    top: 50.5em;
     width: 100%;
     background: rgba(255, 255, 255, 0.5);
     padding: 5px 0 0 60px;

@@ -10,8 +10,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 
 //fonts
-$primary-font: 'Noto Sans JP', Tahoma, Geneva, Helvetica, Arial, sans-serif;
-$secondary-font: 'Nanum Myeongjo', Georgia, serif;
+$primary-font: 'Noto Sans JP', sans-serif;
+$secondary-font: 'Nanum Myeongjo', serif;
 
 //colors
 $color-1: #305b72; //Dark Blue
@@ -53,7 +53,7 @@ h1 {
   color: $color-1;
   font-family: $secondary-font;
   font-size: 60px;
-  font-weight: 50em;
+  font-weight: bolder;
   text-align: left;
   line-height: 1em;
 }
@@ -61,13 +61,13 @@ h2 {
   color: $color-2;
   font-size: 22px;
   font-style: italic;
-  font-weight: 40em;
+  font-weight: lighter;
 }
 h3 {
   color: $color-2;
   font-family: $secondary-font;
   font-size: 40px;
-  font-weight: 30em;
+  font-weight: normal;
   line-height: 1.25em;
   margin: 0.5em 0;
   text-align: left;
@@ -79,7 +79,6 @@ header {
   text-align: left;
   top: 0;
   width: 100%;
- 
 }
 header h1 {
   border-top: 5px solid white;
@@ -216,9 +215,12 @@ aside .wrapper a {
 aside .wrapper a:focus {
   outline: thin dotted;
 }
-aside .wrapper a:active, a:hover {
+
+aside .wrapper a:active,
+a:hover {
   color: $color-3;
   outline: 0;
+  font-weight: bold;
   text-decoration: underline wavy $color-1;
 }
 
@@ -386,8 +388,8 @@ aside .wrapper a:active, a:hover {
     }
 
 .summary p:first-child {
-    padding-top: 60em;
-    }
+  padding-top: 25em;
+  }
 
   .preamble {
    border-top: none;
@@ -396,30 +398,16 @@ aside .wrapper a:active, a:hover {
   .design-archives h3 {
     display: none;
   }
-  div#design-selection{
-    position: absolute;
-    left: 0%;
-    top: 565px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 5px 0 0 60px;
-  }
-  div#zen-resources{
-    position: absolute;
-    left: 0%;
-    top: 900px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 5px 0 0 60px;
-  }
+
   .design-archives nav {
     position: absolute;
     left: 0%;
-    top: 500px;
+    top: 50.5em;
     width: 100%;
     background: rgba(255, 255, 255, 0.5);
     padding: 5px 0 0 60px;
   }
+  
   .design-archives li {
     display: inline;
     margin: 0;
