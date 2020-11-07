@@ -1,0 +1,63 @@
+
+header {
+    grid-area: header;
+  }
+
+.top-image {
+    grid-area: top-image;
+  }
+
+.design-selection {
+    grid-area: menu-designs;
+  }
+
+.zen-resources {
+    grid-area: menu-resources;
+  }
+
+.viewall {
+    grid-area: menu-viewall;
+  }
+
+.preamble {
+    grid-area: content-road;
+  }
+
+.explanation {
+    grid-area: content-about;
+  }
+
+.participation {
+    grid-area: content-participation;
+  }
+
+.benefits {
+    grid-area: content-benefits;
+  }
+
+.requirements {
+    grid-area: content-requirements;
+  }
+
+footer {
+    grid-area: footer;
+}
+
+
+
+.page-wrapper {
+
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header header"
+        "top-image top-image top-image"
+        "menu-designs menu-resources menu-viewall"
+        "content-road content-road content-road"
+        "content-about content-about content-about"
+        "content-participation content-participation content-participation"
+        "content-benefits content-benefits content-benefits"
+        "content-requirements content-requirements content-requirements"
+        "footer footer footer";
+}

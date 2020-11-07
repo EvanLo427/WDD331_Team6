@@ -116,38 +116,38 @@ a:hover {
 }
 
 .summary {
-  background: ;
+  
   border-top: 20px inset #6cd0e8;
   background-color: white; 
 }
 
 .preamble {
-  background: ;
+ 
   border-top: 20px inset #6cd0e8;
   z-index: 4;
   background-color: Yellow;
 }
 
 .explanation {
-  background: ;
+  
   border-top: 20px inset #6cd0e8;
   background-color: red;
 }
 
 .participation {
-  background: ;
+ 
   border-top: 20px inset #6cd0e8;
   background-color: green;
 }
 
 .benefits {
-  background: ;
+  
   border-top: 20px inset #6cd0e8;
   background-color: blue;
   }
 
 .requirements {
-  background: ;
+  
   border-top: 20px inset #6cd0e8;
   background-color: pink;
 }
