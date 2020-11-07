@@ -232,13 +232,13 @@ a:hover {
   }
 
   .explanation::before {
-    content: url(/WDD331_Team6/ZenGarden/src/assets/images/shutter.svg);
+    content: url(https://cdn.glitch.com/1ca6f7b3-1b1c-4df8-bc81-1d4483954131%2Fshutter.svg?v=1604789343787);
     grid-column: 1;
     grid-row: 2;
   }
 
   .explanation::after {
-    content: url(/WDD331_Team6/ZenGarden/src/assets/images/shutter.svg);
+    content: url(https://cdn.glitch.com/1ca6f7b3-1b1c-4df8-bc81-1d4483954131%2Fshutter.svg?v=1604789343787);
     grid-column: 3;
     grid-row: 2;
   }
@@ -283,13 +283,13 @@ a:hover {
   }
 
   .requirements::before {
-    content: url(/WDD331_Team6/ZenGarden/src/assets/images/shutter.svg);
+    content: url(https://cdn.glitch.com/1ca6f7b3-1b1c-4df8-bc81-1d4483954131%2Fshutter.svg?v=1604789343787);
     grid-column: 1;
     grid-row: 3;
   }
 
   .requirements::after {
-    content: url(/WDD331_Team6/ZenGarden/src/assets/images/shutter.svg);
+    content: url(https://cdn.glitch.com/1ca6f7b3-1b1c-4df8-bc81-1d4483954131%2Fshutter.svg?v=1604789343787);
     grid-column: 3;
     grid-row: 3;
   }
