@@ -5,13 +5,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 /* Google Font import for Noto Sans JP*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
-/*colors
-$color-1: #305B72; Dark Blue
-$color-2: #215c3d; Green
-$color-3: #6cd0e8; Light blue
-$color-4: #F5E4D2; Sand
-$color-5: #ffffff; White 
-*/
 aside,
 footer,
 header,
@@ -27,11 +20,11 @@ html {
 }
 
 body {
-  color: #305B72;
+  color: #305b72;
   font-family: "Noto Sans JP", Tahoma, Geneva, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.75em;
-  background: -moz-linear-gradient(top, #6cd0e8 0%, #f5e4d2 100%);
+  background: -moz-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6cd0e8), color-stop(100%, #F5E4D2));
   background: -webkit-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
   background: -o-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
@@ -41,7 +34,7 @@ body {
 }
 
 h1 {
-  color: #305B72;
+  color: #305b72;
   font-family: "Nanum Myeongjo", Georgia, serif;
   font-size: 60px;
   font-weight: 50em;
@@ -200,7 +193,7 @@ aside .wrapper a:focus {
 aside .wrapper a:active, a:hover {
   color: #6cd0e8;
   outline: 0;
-  text-decoration: underline wavy #305B72;
+  text-decoration: underline wavy #305b72;
 }
 
 /*@media all and (min-width: 1024px) and (max-width: 1280px) {
@@ -214,7 +207,7 @@ aside .wrapper a:active, a:hover {
   }
 
   .explanation {
-    border: 4px inset #305B72;
+    border: 4px inset #305b72;
     padding: 10px 0 40px 0;
     display: grid;
     grid-template-columns: 15% 70% 15%;
@@ -249,7 +242,7 @@ aside .wrapper a:active, a:hover {
   }
 
   .requirements {
-    border: 4px inset #305B72;
+    border: 4px inset #305b72;
     padding: 10px 0 40px 0;
     display: grid;
     grid-template-columns: 15% 70% 15%;
