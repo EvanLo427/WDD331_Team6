@@ -1,203 +1,352 @@
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-/* basic elements */
+/*Heading: Google Font Nanum Myeongjo*/
+/*Google Font import for Josefin Slab
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100;300&display=swap');*/
+/*Google Font import for Nanum Myeong*/
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+/* Google Font import for Noto Sans JP*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
 html {
-  margin: 0;
-  padding: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font: 75% georgia, sans-serif;
-  line-height: 1.88889;
-  color: #555753;
-  background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right;
-  margin: 0;
-  padding: 0;
+  color: #305b72;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.75em;
+  background: -moz-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6cd0e8), color-stop(100%, #F5E4D2));
+  background: -webkit-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
+  background: -o-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
+  background: -ms-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
+  background: linear-gradient(to bottom, transparent, #6cd0e8, transparent, #F5E4D2);
+  /*z-index: -1;*/
 }
 
-p {
-  margin-top: 0;
-  text-align: justify;
+h1 {
+  color: #305b72;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 60px;
+  font-weight: bolder;
+  text-align: left;
+  line-height: 1em;
+}
+
+h2 {
+  color: #215c3d;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: lighter;
 }
 
 h3 {
-  font: italic normal 1.4em georgia, sans-serif;
-  letter-spacing: 1px;
-  margin-bottom: 0;
-  color: #7D775C;
+  color: #215c3d;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 1.25em;
+  margin: 0.5em 0;
+  text-align: left;
 }
 
-a:link {
-  font-weight: bold;
-  text-decoration: none;
-  color: #B7A5DF;
-}
-
-a:visited {
-  font-weight: bold;
-  text-decoration: none;
-  color: #D4CDDC;
-}
-
-a:hover, a:focus, a:active {
-  text-decoration: underline;
-  color: #9685BA;
-}
-
-abbr {
-  border-bottom: none;
-}
-
-/* specific divs */
-.page-wrapper {
-  background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left;
-  padding: 0 175px 0 110px;
-  margin: 0;
+header {
+  margin: 0 auto;
+  max-width: 1040px;
   position: relative;
-}
-
-.intro {
-  min-width: 470px;
+  text-align: left;
+  top: 0;
   width: 100%;
 }
 
 header h1 {
-  background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
-  margin-top: 10px;
-  display: block;
-  width: 219px;
-  height: 87px;
-  float: left;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  border-top: 5px solid white;
+  color: #00374f;
+  display: inline-block;
+  min-height: 70px;
+  margin: 55px auto 0;
+  padding: 0 10px;
+}
+
+header h1:after {
+  content: "";
+  height: 2px;
+  left: 0;
+  margin-top: -3px;
+  position: absolute;
+  width: 100%;
 }
 
 header h2 {
-  background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
-  margin-top: 58px;
-  margin-bottom: 40px;
-  width: 200px;
-  height: 18px;
-  float: right;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  text-align: left;
+  max-width: 695px;
+  margin: -10px auto 0;
+  width: 100%;
 }
 
-header {
-  padding-top: 20px;
-  height: 87px;
+.page-wrapper {
+  margin: 1em;
+}
+
+a {
+  color: #215c3d;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  color: #6cd0e8;
+  outline: 0;
+  text-decoration: underline wavy #4b4b4b;
+}
+
+.summary::before {
+  content: none;
 }
 
 .summary {
-  clear: both;
-  margin: 20px 20px 20px 10px;
-  width: 160px;
-  float: left;
+  background-image: url(https://cdn.glitch.com/8bc641d4-998c-46b8-8669-2a3be0f896fa%2F1364063978.svg?v=1604095977882);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  background-size: 35%;
+  width: auto;
+  padding: 100px 0 0 0;
+  text-align: center;
+  margin: 0 0 5em 0;
+  border-top: 5px solid white;
 }
 
-.summary p {
-  font: italic 1.1em/2.2 georgia;
-  text-align: center;
+.summary p:first-child {
+  padding-top: 20em;
 }
 
 .preamble {
-  clear: right;
-  padding: 0px 10px 0 10px;
+  border-top: 4px inset #6cd0e8;
 }
 
-.supporting {
-  padding-left: 10px;
-  margin-bottom: 40px;
+.participation {
+  border-top: 4px inset #6cd0e8;
 }
 
-footer {
+.explanation {
+  border-top: 4px inset #6cd0e8;
+}
+
+.benefits {
+  border-top: 4px inset #6cd0e8;
+}
+
+.requirements {
+  border-top: 4px inset #6cd0e8;
+}
+
+.supporting footer {
+  height: 100%;
+  max-width: 100%;
   text-align: center;
+  padding: 2em;
+  border-top: 4px inset #6cd0e8;
+  background-color: rgba(108, 208, 232, 0.5);
 }
 
-footer a:link, footer a:visited {
-  margin-right: 20px;
+aside {
+  border-top: 4px inset #6cd0e8;
 }
 
-.sidebar {
-  margin-left: 600px;
-  position: absolute;
-  top: 0;
-  right: 0;
+aside .wrapper {
+  margin: -5px auto 0;
 }
 
-.sidebar .wrapper {
-  font: 10px verdana, sans-serif;
-  background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
-  padding: 10px;
-  margin-top: 150px;
-  width: 130px;
-}
-
-.sidebar h3.select {
-  background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
-  margin: 10px 0 5px 0;
-  width: 97px;
-  height: 16px;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.sidebar h3.archives {
-  background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
-  margin: 25px 0 5px 0;
-  width: 57px;
-  height: 14px;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.sidebar h3.resources {
-  background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
-  margin: 25px 0 5px 0;
-  width: 63px;
-  height: 10px;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.sidebar ul {
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar li {
-  line-height: 1.3em;
-  background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
-  display: block;
-  padding-top: 5px;
-  margin-bottom: 5px;
+aside .wrapper li {
   list-style-type: none;
+  list-style-image: url(https://cdn.glitch.com/8bc641d4-998c-46b8-8669-2a3be0f896fa%2F1364063978.svg?v=1604095977882);
 }
 
-.sidebar li a:link {
-  color: #988F5E;
+aside .wrapper a {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 1.2em;
+  font-weight: 40em;
+  text-decoration: none;
 }
 
-.sidebar li a:visited {
-  color: #B3AE94;
+aside .wrapper a:focus {
+  outline: thin dotted;
 }
 
-.extra1 {
-  background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
-  position: absolute;
-  top: 40px;
-  right: 0;
-  width: 148px;
-  height: 110px;
+aside .wrapper a:active,
+a:hover {
+  color: #6cd0e8;
+  outline: 0;
+  font-weight: bold;
+  text-decoration: underline wavy #305b72;
+}
+
+/*@media all and (min-width: 1024px) and (max-width: 1280px) {
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+}*/
+/* LARGE VIEW */
+@media all and (min-width: 550px) and (max-width: 1280px) {
+  .page-wrapper {
+    padding: 6em;
+  }
+
+  .explanation {
+    border: 4px inset #305b72;
+    padding: 10px 0 40px 0;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 5em 12em 12em;
+  }
+
+  .explanation h3 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .explanation p {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .explanation p:last-child {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .explanation::before {
+    content: url(https://cdn.glitch.com/1ca6f7b3-1b1c-4df8-bc81-1d4483954131%2Fshutter.svg?v=1604789343787);
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .explanation::after {
+    content: url(https://cdn.glitch.com/1ca6f7b3-1b1c-4df8-bc81-1d4483954131%2Fshutter.svg?v=1604789343787);
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .requirements {
+    border: 4px inset #305b72;
+    padding: 10px 0 40px 0;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 5em 12em 12em 12em 12em 12em;
+    grid-auto-flow: row;
+  }
+
+  .requirements h3 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .requirements p:nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .requirements p:nth-child(3) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .requirements p:nth-child(4) {
+    grid-column: 2;
+    grid-row: 5;
+  }
+
+  .requirements p:nth-child(5) {
+    grid-column: 2;
+    grid-row: 6;
+  }
+
+  .requirements p:last-child {
+    grid-column: 2;
+    grid-row: 7;
+  }
+
+  .requirements::before {
+    content: url(https://cdn.glitch.com/1ca6f7b3-1b1c-4df8-bc81-1d4483954131%2Fshutter.svg?v=1604789343787);
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .requirements::after {
+    content: url(https://cdn.glitch.com/1ca6f7b3-1b1c-4df8-bc81-1d4483954131%2Fshutter.svg?v=1604789343787);
+    grid-column: 3;
+    grid-row: 3;
+  }
+}
+/* SMALL VIEW */
+@media all and (min-width: 350px) and (max-width: 550px) {
+  .header {
+    height: 320px;
+  }
+
+  .summary {
+    background-position: 50% 50%;
+    background-size: 45%;
+    padding-top: 0;
+  }
+
+  .summary p:first-child {
+    padding-top: 25em;
+  }
+
+  .preamble {
+    border-top: none;
+    padding: 20px 0 0 0;
+  }
+
+  .design-archives h3 {
+    display: none;
+  }
+
+  .design-archives nav {
+    position: absolute;
+    left: 0%;
+    top: 50.5em;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5px 0 0 60px;
+  }
+
+  .design-archives li {
+    display: inline;
+    margin: 0;
+  }
+
+  .design-archives li.next {
+    display: none;
+  }
+
+  .design-archives .viewall a,
+.design-archives a::before {
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+  }
+
+  .design-archives .viewall a:hover,
+.design-archives a:hover::before {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
