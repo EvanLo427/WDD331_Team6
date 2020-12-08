@@ -535,3 +535,28 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
+
+@keyframes moon {
+    to {
+        left: 120%;
+        top: 0px
+    }
+}
+
+body::after {
+    display: block;
+    content: '';
+    background: url(https://upload.wikimedia.org/wikipedia/commons/e/ee/Weather_icon_-_full_moon.svg) top left;
+    background-size: cover;
+    animation-name: moon;
+    animation-duration: 360s;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    left: -100px;
+}
+
+p {
+    padding: 0 1em;
+}
