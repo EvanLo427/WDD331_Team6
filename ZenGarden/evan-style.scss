@@ -162,11 +162,8 @@ a:hover {
 }
 
 
-
 .preamble {
-
   border-top: 4px inset $color-3;
-
 }
 
 .participation {
@@ -198,7 +195,6 @@ a:hover {
   border-top: 4px inset $color-3;
   background-color: rgba(108, 208, 232, 0.5);
 }
-
 aside {
   border-top: 4px inset $color-3;
 }
@@ -242,9 +238,8 @@ a:hover {
     max-width: 1040px;
     padding: 40px;
     position: relative;
-    width: 100%;
-   
   }
+
   aside .wrapper:after {
     clear: both;
     content: " ";
@@ -297,9 +292,6 @@ a:hover {
     padding: 6em;
   }
 
-
-
-
   .explanation {
 
     border: 4px inset $color-1;
@@ -314,25 +306,17 @@ a:hover {
   .explanation h3 {
     grid-column: 2;
     grid-row: 1;
-
-
   }
 
   .explanation p {
-
     grid-column: 2;
     grid-row: 2;
-
-
   }
 
   .explanation p:last-child {
     grid-column: 2;
     grid-row: 3;
-
   }
-
- 
 
   .explanation:before,
   .explanation:after {
@@ -374,63 +358,44 @@ a:hover {
     left: 15vw;
   }
 
-
-
-
   .requirements {
-
     border: 4px inset $color-1;
     padding: 10px 0 40px 0;
-
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 5em 12em 12em 12em 12em 12em;
     grid-auto-flow: row;
     background-color: $color-5;
-
-
   }
 
   .requirements h3 {
     grid-column: 2;
     grid-row: 1;
-
-
   }
 
   .requirements p:nth-child(2) {
-
     grid-column: 2;
     grid-row: 2;
-
-
   }
 
   .requirements p:nth-child(3) {
     grid-column: 2;
     grid-row: 3;
-
   }
 
   .requirements p:nth-child(4) {
     grid-column: 2;
     grid-row: 5;
-
-
   }
 
   .requirements p:nth-child(5) {
     grid-column: 2;
     grid-row: 6;
-
-
   }
 
   .requirements p:last-child {
     grid-column: 2;
     grid-row: 7;
-
-
   }
 
   .requirements:before,
@@ -445,7 +410,6 @@ a:hover {
     -webkit-transition: 2000ms;
     border: 3px solid rgba(0, 0, 0, 0.5);
     margin: -90px 0 0 0;
-
   }
 
   .requirements:before {
@@ -469,10 +433,7 @@ a:hover {
 
   .requirements:hover:after {
     left: 15vw;
-
   }
-
-
 
 }
 
@@ -481,13 +442,11 @@ a:hover {
 /* SMALL VIEW */
 @media all and (min-width: 350px) and (max-width: 524px) {
 
-
   .header {
     height: 25em;
   }
 
   .summary {
-
     background-position: auto;
     background-size: 100%;
     padding-top: 0;
@@ -534,4 +493,72 @@ a:hover {
   .design-archives a:hover::before {
     background-color: rgba(255, 255, 255, 0.2);
   }
+}
+
+
+@keyframes moon {
+    to {
+        left: 120%;
+        top: 0px
+    }
+}
+
+body::after {
+    display: block;
+    content: '';
+    background: url(https://upload.wikimedia.org/wikipedia/commons/e/ee/Weather_icon_-_full_moon.svg) top left;
+    background-size: cover;
+    animation: mymove 5s infinite;
+    animation-name: moon;
+    animation-duration: 60s;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 350px;
+    left: 100px;
+}
+
+p {
+    padding: 0 1em;
+}
+
+@keyframes seagull {
+  to {
+      left: 115%;
+      top: 0px;
+  }
+}
+
+nav::after {
+  display: block;
+  content: '';
+  background: url(seagull-1.svg) top left;
+  background-size: cover;
+  animation: mymove 5s infinite;
+  animation-name: seagull;
+  animation-duration: 120s;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 700px;
+  left: 300px;
+}
+
+nav::before {
+  display: block;
+  content: '';
+  background: url(seagull-2.svg) top right;
+  background-size: cover;
+  animation: mymove 5s infinite;
+  animation-name: seagull;
+  animation-duration: 30s;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 100px;
+  left: -100px;
+}
+
+p {
+  padding: 0 1em;
 }
