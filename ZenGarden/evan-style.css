@@ -1,23 +1,7 @@
 /*Google Font import for Nanum Myeong*/
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
-
 /* Google Font import for Noto Sans JP*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
-
-//fonts
-$primary-font: 'Nanum Myeongjo',
-serif;
-$secondary-font: 'Noto Sans JP',
-sans-serif;
-
-//colors
-$color-1: #305B72; //Dark Blue
-$color-2: #215c3d; //Green
-$color-3: #6cd0e8; //Light blue
-$color-4: #F5E4D2; //Sand
-$color-5: #ffffff; //White
-
-
 aside,
 footer,
 header,
@@ -33,22 +17,20 @@ html {
 }
 
 body {
-
-  color: $color-1;
+  color: #305B72;
   font-family: "secondary-font", Tahoma, Geneva, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.75em;
-  background: -moz-linear-gradient(top, $color-3 0%, $color-4 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $color-3), color-stop(100%, $color-4));
-  background: -webkit-linear-gradient(top, $color-3 0%, $color-4 100%);
-  background: -o-linear-gradient(top, $color-3 0%, $color-4 100%);
-  background: -ms-linear-gradient(top, $color-3 0%, $color-4 100%);
-  background: linear-gradient(to bottom, transparent, $color-3, transparent, $color-4);
-
+  background: -moz-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6cd0e8), color-stop(100%, #F5E4D2));
+  background: -webkit-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
+  background: -o-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
+  background: -ms-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
+  background: linear-gradient(to bottom, transparent, #6cd0e8, transparent, #F5E4D2);
 }
 
 h1 {
-  color: $color-1;
+  color: #305B72;
   font-family: "$primary-font", Georgia, serif;
   font-size: 60px;
   font-weight: bolder;
@@ -57,14 +39,14 @@ h1 {
 }
 
 h2 {
-  color: $color-2;
+  color: #215c3d;
   font-size: 22px;
   font-style: italic;
   font-weight: lighter;
 }
 
 h3 {
-  color: $color-2;
+  color: #215c3d;
   font-family: "$primary-font", Georgia, serif;
   font-size: 40px;
   font-weight: normal;
@@ -80,17 +62,15 @@ header {
   text-align: left;
   top: 0;
   width: 100%;
-
 }
 
 header h1 {
-  border-top: 5px solid $color-5;
-  color: $color-1;
+  border-top: 5px solid #ffffff;
+  color: #305B72;
   display: inline-block;
   min-height: 70px;
   margin: 55px auto 0;
   padding: 0 10px;
-
 }
 
 header h1:after {
@@ -100,7 +80,6 @@ header h1:after {
   margin-top: -3px;
   position: absolute;
   width: 100%;
-
 }
 
 header h2 {
@@ -110,15 +89,12 @@ header h2 {
   width: 100%;
 }
 
-
-
 .page-wrapper {
   margin: 1em;
-
 }
 
 a {
-  color: $color-2;
+  color: #215c3d;
   font-family: "$primary-font", Georgia, serif;
   font-size: 20px;
   font-weight: bold;
@@ -131,13 +107,11 @@ a:focus {
 
 a:active,
 a:hover {
-  color: $color-3;
+  color: #6cd0e8;
   outline: 0;
   font-weight: bold;
   text-decoration: underline wavy #4b4b4b;
 }
-
-
 
 .summary::before {
   content: none;
@@ -153,38 +127,31 @@ a:hover {
   padding: 100px 0 0 0;
   text-align: center;
   margin: 0 0 5em 0;
-  border-top: 5px solid $color-5;
-
+  border-top: 5px solid #ffffff;
 }
 
 .summary p:first-child {
   padding-top: 20em;
 }
 
-
 .preamble {
-  border-top: 4px inset $color-3;
+  border-top: 4px inset #6cd0e8;
 }
 
 .participation {
-  border-top: 4px inset $color-3;
+  border-top: 4px inset #6cd0e8;
 }
 
 .explanation {
-
-  border-top: 4px inset $color-3;
-
+  border-top: 4px inset #6cd0e8;
 }
 
-
 .benefits {
-
-  border-top: 4px inset $color-3;
+  border-top: 4px inset #6cd0e8;
 }
 
 .requirements {
-
-  border-top: 4px inset $color-3;
+  border-top: 4px inset #6cd0e8;
 }
 
 .supporting footer {
@@ -192,15 +159,15 @@ a:hover {
   max-width: 100%;
   text-align: center;
   padding: 2em;
-  border-top: 4px inset $color-3;
+  border-top: 4px inset #6cd0e8;
   background-color: rgba(108, 208, 232, 0.5);
 }
+
 aside {
-  border-top: 4px inset $color-3;
+  border-top: 4px inset #6cd0e8;
 }
 
 aside .wrapper {
-
   margin: -5px auto 0;
 }
 
@@ -222,17 +189,15 @@ aside .wrapper a:focus {
 
 aside .wrapper a:active,
 a:hover {
-  color: $color-3;
+  color: #6cd0e8;
   outline: 0;
   font-weight: bold;
-  text-decoration: underline wavy $color-1;
+  text-decoration: underline wavy #305B72;
 }
-
-
 
 @media all and (min-width: 768px) and (max-width: 1280px) {
   aside .wrapper {
-    background-color: $color-5;
+    background-color: #ffffff;
     border-top: 5px solid #edf6ff;
     margin: auto;
     max-width: 1040px;
@@ -250,57 +215,62 @@ a:hover {
     visibility: hidden;
     width: 0;
   }
+
   aside .wrapper h3 {
-    color: $color-1;
+    color: #305B72;
     font-size: 24px;
     margin-top: 0;
   }
+
   aside .wrapper a {
-    color: $color-2;
+    color: #215c3d;
   }
+
   aside .wrapper a.designer-name {
     color: #00374f;
   }
+
   aside .wrapper ul {
     list-style: none;
     padding: 0;
   }
+
   aside .wrapper ul li {
     margin-bottom: 12px;
   }
+
   aside .wrapper ul li:last-child {
     margin-bottom: 0;
   }
+
   aside .wrapper .design-selection {
     border-right: 2px solid #edf6ff;
     float: left;
     margin-right: 40px;
     width: 50%;
   }
+
   aside .wrapper .design-selection .design-name {
     display: block;
   }
+
   aside .wrapper .zen-resources {
     margin-top: 40px;
   }
 }
-
 /* LARGE VIEW */
 @media all and (min-width: 550px) and (max-width: 1280px) {
-
   .page-wrapper {
     padding: 6em;
   }
 
   .explanation {
-
-    border: 4px inset $color-1;
+    border: 4px inset #305B72;
     padding: 10px 0 40px 0;
-    background-color: $color-5;
+    background-color: #ffffff;
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 5em 12em 12em;
-
   }
 
   .explanation h3 {
@@ -319,7 +289,7 @@ a:hover {
   }
 
   .explanation:before,
-  .explanation:after {
+.explanation:after {
     content: "";
     width: 100%;
     height: 520px;
@@ -332,8 +302,6 @@ a:hover {
     margin: -90px 0 0 0;
   }
 
-
-
   .explanation:before {
     background: url(/ZenGarden/image/shutter.svg);
     background-size: cover;
@@ -344,7 +312,6 @@ a:hover {
   .explanation:after {
     background: url(/ZenGarden/image/shutter.svg);
     background-size: cover;
-
     background-position: -15vw 0;
     grid-column: 3;
     grid-row: 2;
@@ -359,13 +326,13 @@ a:hover {
   }
 
   .requirements {
-    border: 4px inset $color-1;
+    border: 4px inset #305B72;
     padding: 10px 0 40px 0;
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 5em 12em 12em 12em 12em 12em;
     grid-auto-flow: row;
-    background-color: $color-5;
+    background-color: #ffffff;
   }
 
   .requirements h3 {
@@ -399,7 +366,7 @@ a:hover {
   }
 
   .requirements:before,
-  .requirements:after {
+.requirements:after {
     content: "";
     width: 100%;
     height: 520px;
@@ -434,14 +401,9 @@ a:hover {
   .requirements:hover:after {
     left: 15vw;
   }
-
 }
-
-
-
 /* SMALL VIEW */
 @media all and (min-width: 350px) and (max-width: 524px) {
-
   .header {
     height: 25em;
   }
@@ -484,54 +446,50 @@ a:hover {
   }
 
   .design-archives .viewall a,
-  .design-archives a::before {
+.design-archives a::before {
     background: rgba(255, 255, 255, 0.1);
     text-decoration: none;
   }
 
   .design-archives .viewall a:hover,
-  .design-archives a:hover::before {
+.design-archives a:hover::before {
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
-
-
 @keyframes moon {
-    to {
-        left: 120%;
-        top: 0px
-    }
+  to {
+    left: 120%;
+    top: 0px;
+  }
 }
-
 body::after {
-    display: block;
-    content: '';
-    background: url(https://upload.wikimedia.org/wikipedia/commons/e/ee/Weather_icon_-_full_moon.svg) top left;
-    background-size: cover;
-    animation: mymove 5s infinite;
-    animation-name: moon;
-    animation-duration: 60s;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 350px;
-    left: 100px;
+  display: block;
+  content: "";
+  background: url(https://upload.wikimedia.org/wikipedia/commons/e/ee/Weather_icon_-_full_moon.svg) top left;
+  background-size: cover;
+  animation: mymove 5s infinite;
+  animation-name: moon;
+  animation-duration: 60s;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 350px;
+  left: 100px;
 }
 
 p {
-    padding: 0 1em;
+  padding: 0 1em;
 }
 
 @keyframes seagull {
   to {
-      left: 115%;
-      top: 0px;
+    left: 115%;
+    top: 0px;
   }
 }
-
 nav::after {
   display: block;
-  content: '';
+  content: "";
   background: url(/ZenGarden/image/seagull-1.svg) top left;
   background-size: cover;
   animation: mymove 5s infinite;
@@ -546,7 +504,7 @@ nav::after {
 
 nav::before {
   display: block;
-  content: '';
+  content: "";
   background: url(/ZenGarden/image/seagull-2.svg) top right;
   background-size: cover;
   animation: mymove 5s infinite;
@@ -562,3 +520,5 @@ nav::before {
 p {
   padding: 0 1em;
 }
+
+/*# sourceMappingURL=evan-style.css.map */
