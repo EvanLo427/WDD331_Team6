@@ -144,7 +144,7 @@ a:hover {
 }
 
 .summary {
-  background-image: url(/ZenGarden/image/wide-beach.svg);
+  background-image: url(/ZenGarden/image/bqnfKxSf6.svg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: 50% 60%;
@@ -434,30 +434,22 @@ a:hover {
   .requirements:hover:after {
     left: 15vw;
   }
-  @keyframes moon {
-    to {
-        left: 120%;
-        top: 0px
-    }
+ 
+//clouds
+@keyframes clouds {
+    0%   {left: 0%; top: 400px;}
+    100% {left: 120%; top: 400px;}
 }
 
-body::after {
-    display: block;
-    content: '';
-    background: url(https://upload.wikimedia.org/wikipedia/commons/e/ee/Weather_icon_-_full_moon.svg) top left;
-    background-size: cover;
-    animation: mymove 5s infinite;
-    animation-name: moon;
-    animation-duration: 60s;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 350px;
-    left: 100px;
-}
-
-p {
-    padding: 0 1em;
+body::before {
+  display: block;
+  content: '';
+  background: url(/ZenGarden/image/b1JSNBBP9.svg) top left;
+  background-size: cover;
+  animation: clouds 30s infinite;
+  width: 500px;
+  height: 200px;
+  position: absolute;
 }
 
 @keyframes seagull-1 {
