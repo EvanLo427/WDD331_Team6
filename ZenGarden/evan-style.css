@@ -401,6 +401,81 @@ a:hover {
   .requirements:hover:after {
     left: 15vw;
   }
+
+  @keyframes moon {
+    to {
+      left: 120%;
+      top: 0px;
+    }
+  }
+  body::after {
+    display: block;
+    content: "";
+    background: url(https://upload.wikimedia.org/wikipedia/commons/e/ee/Weather_icon_-_full_moon.svg) top left;
+    background-size: cover;
+    animation: mymove 5s infinite;
+    animation-name: moon;
+    animation-duration: 60s;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 350px;
+    left: 100px;
+  }
+
+  p {
+    padding: 0 1em;
+  }
+
+  @keyframes seagull-1 {
+    0% {
+      left: -20%;
+      top: 0px;
+    }
+    100% {
+      left: 120%;
+      top: 0px;
+    }
+  }
+  nav::after {
+    display: block;
+    content: "";
+    background: url(/ZenGarden/image/seagull-1.svg) top left;
+    background-size: cover;
+    animation: seagull-2 0s infinite;
+    animation-name: seagull-1;
+    animation-duration: 10s;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+
+  @keyframes seagull-2 {
+    0% {
+      left: 120%;
+      top: 110px;
+    }
+    100% {
+      left: -30%;
+      top: 120px;
+    }
+  }
+  nav::before {
+    display: block;
+    content: "";
+    background: url(/ZenGarden/image/seagull-2.svg) top right;
+    background-size: cover;
+    animation: seagull-2 0s infinite;
+    animation-name: seagull-2;
+    animation-duration: 10s;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+
+  p {
+    padding: 0 1em;
+  }
 }
 /* SMALL VIEW */
 @media all and (min-width: 350px) and (max-width: 524px) {
@@ -455,70 +530,6 @@ a:hover {
 .design-archives a:hover::before {
     background-color: rgba(255, 255, 255, 0.2);
   }
-}
-@keyframes moon {
-  to {
-    left: 120%;
-    top: 0px;
-  }
-}
-body::after {
-  display: block;
-  content: "";
-  background: url(https://upload.wikimedia.org/wikipedia/commons/e/ee/Weather_icon_-_full_moon.svg) top left;
-  background-size: cover;
-  animation: mymove 5s infinite;
-  animation-name: moon;
-  animation-duration: 60s;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 350px;
-  left: 100px;
-}
-
-p {
-  padding: 0 1em;
-}
-
-@keyframes seagull {
-  to {
-    left: 115%;
-    top: 0px;
-  }
-}
-nav::after {
-  display: block;
-  content: "";
-  background: url(/ZenGarden/image/seagull-1.svg) top left;
-  background-size: cover;
-  animation: mymove 5s infinite;
-  animation-name: seagull;
-  animation-duration: 120s;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 700px;
-  left: 300px;
-}
-
-nav::before {
-  display: block;
-  content: "";
-  background: url(/ZenGarden/image/seagull-2.svg) top right;
-  background-size: cover;
-  animation: mymove 5s infinite;
-  animation-name: seagull;
-  animation-duration: 30s;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 100px;
-  left: -100px;
-}
-
-p {
-  padding: 0 1em;
 }
 
 /*# sourceMappingURL=evan-style.css.map */
