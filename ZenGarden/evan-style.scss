@@ -33,7 +33,6 @@ html {
 }
 
 body {
-
   color: $color-1;
   font-family: "secondary-font", Tahoma, Geneva, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -43,8 +42,7 @@ body {
   background: -webkit-linear-gradient(top, $color-3 0%, $color-4 100%);
   background: -o-linear-gradient(top, $color-3 0%, $color-4 100%);
   background: -ms-linear-gradient(top, $color-3 0%, $color-4 100%);
-  background: linear-gradient(to bottom, transparent, $color-3, transparent, $color-4);
-
+  background: linear-gradient(to bottom, $color-3, transparent, $color-4);
 }
 
 h1 {
@@ -413,14 +411,14 @@ a:hover {
   }
 
   .requirements:before {
-    background: url(shutter.svg);
+    background: url(/ZenGarden/image/shutter.svg);
     background-size: cover;
     grid-column: 1;
     grid-row: 3;
   }
 
   .requirements:after {
-    background: url(shutter.svg);
+    background: url(/ZenGarden/image/shutter.svg);
     background-size: cover;
     background-position: -15vw 0;
     grid-column: 3;
