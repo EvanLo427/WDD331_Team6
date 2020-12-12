@@ -2,11 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 /* Google Font import for Noto Sans JP*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
-#css-zen-garden {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 aside,
 footer,
 header,
@@ -31,12 +26,12 @@ body {
   background: -webkit-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
   background: -o-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
   background: -ms-linear-gradient(top, #6cd0e8 0%, #F5E4D2 100%);
-  background: linear-gradient(to bottom, #6cd0e8, transparent, #F5E4D2);
+  background: linear-gradient(to bottom, transparent, #6cd0e8, transparent, #F5E4D2);
 }
 
 h1 {
   color: #305B72;
-  font-family: "$primary-font";
+  font-family: "$primary-font", Georgia, serif;
   font-size: 60px;
   font-weight: bolder;
   text-align: left;
@@ -62,7 +57,6 @@ h3 {
 
 header {
   margin: 0 auto;
-  max-width: 1040px;
   position: relative;
   text-align: left;
   top: 0;
@@ -70,7 +64,7 @@ header {
 }
 
 header h1 {
-  border-top: 5px solid #ffffff;
+  border-bottom: 5px solid #ffffff;
   color: #305B72;
   display: inline-block;
   min-height: 70px;
@@ -88,20 +82,18 @@ header h1:after {
 }
 
 header h2 {
-  text-align: left;
-  max-width: 695px;
-  margin: -10px auto 0;
+  text-align: center;
+  margin: 0 auto 0;
   width: 100%;
 }
 
 .page-wrapper {
   margin: 1em;
-  background-color: rgba(65, 105, 225, 0.418);
 }
 
 a {
   color: #215c3d;
-  font-family: "$primary-font";
+  font-family: "$primary-font", Georgia, serif;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
@@ -123,27 +115,26 @@ a:hover {
   content: none;
 }
 
-.summary {
-  background-image: url(/ZenGarden/image/bqnfKxSf6.svg);
+header {
+  background-image: url(https://vectr.com/4keriwheeler/f1mnQjLMSU.svg?width=851&height=315&select=f1mnQjLMSUpage0);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 50% 60%;
+  background-position: center;
   background-size: 100%;
+  height: auto;
   width: 100%;
-  padding: 100px 0 0 0;
+  padding: 100px 0 30em 0;
   text-align: center;
-  margin: 0 0 5em 0;
+  margin: 0;
   border-top: 5px solid #ffffff;
 }
 
 .summary p:first-child {
-  padding-top: 20em;
+  padding-top: 0;
 }
 
 .preamble {
   border-top: 4px inset #6cd0e8;
-  background-color: white;
-  opacity: 0.8;
 }
 
 .participation {
@@ -181,7 +172,7 @@ aside .wrapper {
 
 aside .wrapper li {
   list-style-type: none;
-  list-style-image: url(/ZenGarden/image/sun.svg);
+  list-style-image: url(https://cdn.glitch.com/8bc641d4-998c-46b8-8669-2a3be0f896fa%2F1364063978.svg?v=1604095977882);
 }
 
 aside .wrapper a {
@@ -203,7 +194,7 @@ a:hover {
   text-decoration: underline wavy #305B72;
 }
 
-@media all and (min-width: 768px) and (max-width: 1680px) {
+@media all and (min-width: 768px) and (max-width: 1280px) {
   aside .wrapper {
     background-color: #ffffff;
     border-top: 5px solid #edf6ff;
@@ -211,6 +202,7 @@ a:hover {
     max-width: 1040px;
     padding: 40px;
     position: relative;
+    width: 100%;
   }
 
   aside .wrapper:after {
@@ -266,8 +258,77 @@ a:hover {
     margin-top: 40px;
   }
 }
+@keyframes clouds {
+  to {
+    left: 100%;
+    top: 200px;
+  }
+}
+body::before {
+  display: block;
+  content: "";
+  background: url(https://vectr.com/4keriwheeler/b1JSNBBP9.svg?width=851&height=315&select=b1JSNBBP9page0) top left;
+  background-size: cover;
+  animation: clouds 30s infinite;
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  top: 50px;
+  left: -200px;
+}
+
+@keyframes seagull-1 {
+  0% {
+    left: -20%;
+    top: 0px;
+  }
+  100% {
+    left: 120%;
+    top: 0px;
+  }
+}
+nav::after {
+  display: block;
+  content: "";
+  background: url(/ZenGarden/image/seagull-1.svg) top left;
+  background-size: cover;
+  animation: seagull-2 0s infinite;
+  animation-name: seagull-1;
+  animation-duration: 10s;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+@keyframes seagull-2 {
+  0% {
+    left: 120%;
+    top: 110px;
+  }
+  100% {
+    left: -30%;
+    top: 120px;
+  }
+}
+nav::before {
+  display: block;
+  content: "";
+  background: url(/ZenGarden/image/seagull-2.svg) top right;
+  background-size: cover;
+  animation: seagull-2 0s infinite;
+  animation-name: seagull-2;
+  animation-duration: 10s;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+p {
+  padding: 0 1em;
+}
+
 /* LARGE VIEW */
-@media all and (min-width: 550px) and (max-width: 1680px) {
+@media all and (min-width: 550px) and (max-width: 1280px) {
   .page-wrapper {
     padding: 6em;
   }
@@ -311,14 +372,14 @@ a:hover {
   }
 
   .explanation:before {
-    background: url(/ZenGarden/image/shutter.svg);
+    background: url(shutter.svg);
     background-size: cover;
     grid-column: 1;
     grid-row: 2;
   }
 
   .explanation:after {
-    background: url(/ZenGarden/image/shutter.svg);
+    background: url(shutter.svg);
     background-size: cover;
     background-position: -15vw 0;
     grid-column: 3;
@@ -388,14 +449,14 @@ a:hover {
   }
 
   .requirements:before {
-    background: url(/ZenGarden/image/shutter.svg);
+    background: url(shutter.svg);
     background-size: cover;
     grid-column: 1;
     grid-row: 3;
   }
 
   .requirements:after {
-    background: url(/ZenGarden/image/shutter.svg);
+    background: url(shutter.svg);
     background-size: cover;
     background-position: -15vw 0;
     grid-column: 3;
@@ -409,74 +470,38 @@ a:hover {
   .requirements:hover:after {
     left: 15vw;
   }
-
-  @keyframes clouds {
-    0% {
-      left: 0%;
-      top: 400px;
-    }
-    100% {
-      left: 120%;
-      top: 400px;
-    }
-  }
-  body::before {
-    display: block;
-    content: "";
-    background: url(/ZenGarden/image/b1JSNBBP9.svg) top left;
-    background-size: cover;
-    animation: clouds 30s infinite;
-    width: 500px;
-    height: 200px;
-    position: absolute;
-  }
-
-  @keyframes seagull-1 {
-    0% {
-      left: -20%;
-      top: 0px;
-    }
-    100% {
-      left: 120%;
-      top: 0px;
-    }
-  }
-  nav::after {
-    display: block;
-    content: "";
-    background: url(/ZenGarden/image/seagull-1.svg) top left;
-    background-size: cover;
-    animation: seagull-2 0s infinite;
-    animation-name: seagull-1;
-    animation-duration: 10s;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-  }
-
-  @keyframes seagull-2 {
-    0% {
-      left: 120%;
-      top: 110px;
-    }
-    100% {
-      left: -30%;
-      top: 120px;
-    }
-  }
-  nav::before {
-    display: block;
-    content: "";
-    background: url(/ZenGarden/image/seagull-2.svg) top right;
-    background-size: cover;
-    animation: seagull-2 0s infinite;
-    animation-name: seagull-2;
-    animation-duration: 10s;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-  }
 }
+/* Tysons Changes */
+body {
+  width: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+/* changed .summary background position */
+/* changed a lot on header */
+header {
+  background-color: #a0ecf0;
+}
+
+.summary + .preamble {
+  margin: 10px 50px 10px 50px;
+  background-color: white;
+}
+
+.preamble p:nth-child(4) {
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+}
+
+#zen-supporting {
+  padding: 0 50px 0 50px;
+}
+
 /* SMALL VIEW */
 @media all and (min-width: 350px) and (max-width: 524px) {
   .header {
@@ -532,4 +557,4 @@ a:hover {
   }
 }
 
-/*# sourceMappingURL=evan-style.css.map */
+/*# sourceMappingURL=tyson-test.css.map */
